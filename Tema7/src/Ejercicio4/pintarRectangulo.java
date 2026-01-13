@@ -8,6 +8,7 @@ public class pintarRectangulo {
 		// TODO Auto-generated method stub
 	Rectangulos rectangulo=new Rectangulos();
 	Scanner sc= new Scanner(System.in);
+	System.out.println("Introduce la base y la altua del rectangulo");
 	int base=sc.nextInt();
 	int altura=sc.nextInt();
 	rectangulo.base=base;
@@ -23,7 +24,7 @@ public class pintarRectangulo {
 	rectangulo.invertido();
 	
 	System.out.println("El área de este rectangulo vale "+ rectangulo.area());
-	System.out.println("El perimetro de este rectangulo vale" + rectangulo.perimetro());
+	System.out.println("El perimetro de este rectangulo vale " + rectangulo.perimetro());
 	sc.close();
 	}
 

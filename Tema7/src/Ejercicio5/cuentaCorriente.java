@@ -30,7 +30,7 @@ public class cuentaCorriente {
 		System.out.println("Dirección: "+direccion);
 		System.out.println("Saldo actual: "+saldo);
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Qué quieres modificar? (1-Nombre, ");
+		System.out.println("Qué quieres modificar? (1-Nombre, 2-Apellido, 3-DNI, 4-Dirección, 5-Saldo");
 		int opciones=sc.nextInt();
 		switch(opciones) {
 		case 1: 

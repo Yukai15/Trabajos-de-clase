@@ -7,15 +7,15 @@ public class Rectangulos {
 	void pintar() {
 		for(int i=0;i<altura;i++) {
 			for(int j=0;j<base;j++) {
-				System.out.println("+");
+				System.out.print("+");
 			}
 			System.out.println();
 		}
 	}
-	void pintarSignos(char signos) {
+	void pintarSignos(char signo) {
 		for(int i=0;i<altura;i++) {
 			for(int j=0;j<base;j++) {
-				System.out.println(signos);
+				System.out.print(signo);
 			}
 			System.out.println();
 		}
@@ -23,7 +23,7 @@ public class Rectangulos {
 	void invertido() {
 		for(int i=0;i<base;i++) {
 			for(int j=0;j<altura;j++) {
-				System.out.println("+");
+				System.out.print("+");
 			}
 			System.out.println();
 		}
