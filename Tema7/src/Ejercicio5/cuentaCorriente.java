@@ -32,6 +32,7 @@ public class cuentaCorriente {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Qué quieres modificar? (1-Nombre, 2-Apellido, 3-DNI, 4-Dirección, 5-Saldo");
 		int opciones=sc.nextInt();
+		sc.nextLine();
 		switch(opciones) {
 		case 1: 
 			System.out.println("Introduce el nombre: ");
@@ -56,6 +57,5 @@ public class cuentaCorriente {
 		default:
 			System.out.println("Opción no válido");
 		}
-		sc.close();
 	}
 }
