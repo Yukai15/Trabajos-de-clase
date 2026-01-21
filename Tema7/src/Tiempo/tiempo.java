@@ -10,16 +10,19 @@ public class tiempo {
 	tiempo(int seg) {
 	this.seg=seg;
 	}
-	tiempo restarTiempo(tiempo t1, tiempo t2) {
+	tiempo restarTiempo(tiempo t2) {
 		//return tiempo=(t1.seg-t2.seg)
-		int restaSegundos=t1.seg-t2.seg;
+		int restaSegundos=this.seg-t2.seg;
 		tiempo t_resta=new tiempo(restaSegundos);
 		return t_resta;
 	}
-	tiempo sumarTiempo(tiempo t1, tiempo t2) {
+	tiempo sumarTiempo(tiempo t2) {
 		//return tiempo=(t1.seg+t2.seg)
-		int sumarSegundos=t1.seg+t2.seg;
+		int sumarSegundos=this.seg+t2.seg;
 		tiempo t_suma=new tiempo(sumarSegundos);
 		return t_suma;
+	}
+	void sumaActual(tiempo t2){
+		int sumaSegundos=this.seg+ t2.seg;
 	}
 }
