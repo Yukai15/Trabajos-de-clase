@@ -13,7 +13,18 @@ public class pizza {
 		this.tipo=tipo;
 		this.estado="pedidas";
 	}
-	public static int totalPedidas() {
+	public static int getTotalPedidas() {
 		return totalPedidas;
 	}
+	public static int getTotalServidas() {
+		return totalServidas;
+	}
+	public void sirve() {
+		if (this.estado="servida") {
+			System.out.println("La pizza ya está servida");
+		}else {
+			
+		}
+	}
+
 }
