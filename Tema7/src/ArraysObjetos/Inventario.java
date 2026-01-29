@@ -42,7 +42,11 @@ public class Inventario {
 	public void disminuir(int cantidad) {
 		stock -=cantidad;
 	}
-
+	public void promocion() {
+		if(stock<4) {
+			
+		}
+	}
 	@Override
 	public String toString() {
 		return "Inventario [nombre=" + nombre + ", stock=" + stock + ", precio=" + precio + "]";
