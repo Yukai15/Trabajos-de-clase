@@ -6,69 +6,39 @@ public class CuentaBancaria {
 	protected int retirado=0;
 	protected float intereses;
 	protected float comision=0;
-	public CuentaBancaria(float saldo, int ingresos, int retirado, float intereses, float comision) {
-		Saldo = saldo;
-		this.ingresos = ingresos;
-		this.retirado = retirado;
-		this.intereses = intereses;
-		this.comision = comision;
+	protected float tasa;
+	public CuentaBancaria(float saldo, float tasa) {
+		this.Saldo = saldo;
+		this.tasa = tasa;
 	}
-	public float getSaldo() {
-		return Saldo;
+	void Ingresar(float dinero) {
+	ingresos++;
+	this.Saldo += dinero;
+	System.out.println("Se ha ingresado correctamente");
 	}
-	public void setSaldo(float saldo) {
-		Saldo = saldo;
-	}
-	public int getIngresos() {
-		return ingresos;
-	}
-	public void setIngresos(int ingresos) {
-		this.ingresos = ingresos;
-	}
-	public int getRetirado() {
-		return retirado;
-	}
-	public void setRetirado(int retirado) {
-		this.retirado = retirado;
-	}
-	public float getIntereses() {
-		return intereses;
-	}
-	public void setIntereses(float intereses) {
-		this.intereses = intereses;
-	}
-	public float getComision() {
-		return comision;
-	}
-	public void setComision(float comision) {
-		this.comision = comision;
-	}
-	public void Ingresar() {
-	this.Saldo += this.ingresos;
-	}
-	public void Retirar() {
-	
-	if (this.Saldo<this.retirado) {
-	System.out.println("No puedes retirar más dinero de lo que tienes");
+	void Retirar(float dinero) {
+	if (this.Saldo>dinero) {
+		retirado++;
+		this.Saldo -=this.retirado;
+		System.out.println("Se ha retirado correctamente");
 		}
 	else {
-		this.Saldo -=this.retirado;
+		System.out.println("No puedes retirar más dinero de lo que tienes");
 		}
 	}
-	public void InteresMensual(int tasaAnual) {
-	tasaAnual=10;
-	this.Saldo=Saldo+(tasaAnual/100);
+	void InteresMensual() {
+	this.Saldo=Saldo+(tasa/100);
 	}
-	public void ExtractoMensual(double comision) {
-		comision=this.retirado*0.10;
-		InteresMensual(ingresos);
+	void ExtractoMensual() {
+		this.Saldo-=comision;
+		InteresMensual();
 	}
-	public void Imprimir() {
-		
+	void Imprimir() {
+		System.out.println("Tienes este saldo" +Saldo
+				+ "\n 1.Has ingresado estas veces" + ingresos
+				+ "\n 2.Has retirado estas veces" + retirado
+				+ "\n 3.Tienes esto de interes" + intereses
+				+ "\n 4.Tienes esto de comisiones " + comision);
 	}
-	@Override
-	public String toString() {
-		return "CuentaBancaria [Saldo=" + Saldo + ", ingresos=" + ingresos + ", retirado=" + retirado + ", intereses="
-				+ intereses + ", comision=" + comision + "]";
-	}
+	
 }
